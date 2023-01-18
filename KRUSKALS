@@ -1,0 +1,76 @@
+#include<stdio.h>
+
+int array[6][6];
+int array2[6];
+int array3[6][6]={0};
+int f=0;
+int main()
+{
+    int d=0;
+    int num=50;
+    int l=0;
+    int r=0;
+    int j=0;
+    for(int i=0;i<6;i++)
+    {
+        for(int j=0;j<6;j++)
+        {
+            printf("Enter the weight between %d and %d:",i,j);
+            scanf("%d",&array[i][j]);
+        }
+        printf("\n");
+    }
+    array2[f++]=0;
+    
+    while(f!=6)
+    {
+        d=0;
+        num=50;
+    for(int i=0;i<6;i++)
+    {
+        for(int j=0;j<6;j++)
+{
+            if(array[i][j]!=0)
+            {
+                if(num>array[i][j])
+                {
+                    num=array[i][j];
+                    l=i;
+                    r=j;
+                 }
+            }
+ }
+    }
+    for(int i=0;i<f;i++)
+    {
+        if(array2[i]==r)
+        {
+            d++;
+        }
+    }
+        
+        if(d==0)
+        {
+array[l][r]=0;
+    array[r][l]=0;
+    array3[l][r]=num;
+    array3[r][l]=num;
+    array2[f++]=r;
+        }
+else if(d!=0)
+        {
+            array[l][r]=0;
+        }
+}
+for(int i=0;i<6;i++)
+    {
+        for(int j=0;j<6;j++)
+        {
+            printf("%d  ",array3[i][j]);
+        }
+        printf("\n");
+        
+    }
+    
+    return(0);
+}
