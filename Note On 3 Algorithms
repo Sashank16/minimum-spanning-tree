@@ -1,0 +1,5 @@
+we were given to find the shortest path of a graph using prims algorithm technique , but there is a limitation of using this algo which is that prims only work for undirected graphs , so as we have a directed graph its not possible to find the minimum cost .
+The same reason works for Krishkals algorithm as well but the codes for both prims and krushkals are attached in my repository for some undirected graph.
+Now in case of Dijkistars algorithm , there is a limitation that it wont work when there is any negative weights be it an directed or an undirected graphs. hence I have attached the code for this using only positive weights.
+
+I have choosen C language for all the algorithms.
